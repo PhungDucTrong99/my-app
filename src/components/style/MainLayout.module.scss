@@ -1,0 +1,28 @@
+/* MainLayout.module.scss */
+.container_layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+:global .ant-menu {
+  height: 100% !important;
+}
+:global a {
+  text-decoration: none;
+}
+.leftMenu {
+  width: 276px; /* Set the width of the left menu */
+  background-color: #f0f0f0; /* Add your desired background color for the left menu */
+}
+
+.contentPage {
+  flex: 1; /* Allow the content page to take up the remaining space */
+  padding: 16px 24px; /* Add padding to the content area as needed */
+}
+
+.custom_card {
+  :global .ant-card-head {
+    background-color: #87e8de;
+  }
+}
+/* You can add additional styling for the FooterPage component here if needed */

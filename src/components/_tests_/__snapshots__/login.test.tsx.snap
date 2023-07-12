@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`isLogin action should not update the user status for an invalid ID 1`] = `"inactive"`;
+
+exports[`isLogin action should update the user status to "active" for a valid ID 1`] = `"active"`;
+
+exports[`isLogin action should update user status to "active" for valid ID 1`] = `"active"`;
+
+exports[`isLogin action user status should not be updated for invalid ID 1`] = `"inactive"`;

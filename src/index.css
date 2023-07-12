@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.spinner-border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+  translate: -50% -50%;
+}
+
+/* CSS for Login Page Start */
+.login-page-container {
+  width: 100%;
+  height: 100vh;
+}
+.users-login {
+  max-width: 550px;
+  border-radius: 10px;
+  margin: auto auto;
+}
+.user-avatar {
+  text-align: center;
+}
+.user-avatar input[name="cbUser"] {
+  display: none;
+}
+.user-avatar:hover img {
+  cursor: pointer;
+  border: 1px solid cyan;
+  border-radius: 50%;
+  box-shadow: 2px 2px 15px cyan, -2px -2px 15px cyan;
+}
+.user-avatar:has(> input[type="radio"]:checked) img {
+  border: 1px solid cyan;
+  border-radius: 50%;
+  box-shadow: 2px 2px 15px cyan, -2px -2px 15px cyan;
+}
+
+.user-avatar img {
+  width: 50%;
+}
+.btn-login {
+  width: 100%;
+}
+/* CSS for Login Page End */
+
+/* CSS for Navar Start */
+nav.navbar {
+  border-bottom: 1px solid red;
+}
+li.nav-item {
+  margin-right: 10px;
+}
+li.nav-item:hover {
+  background-color: cyan;
+  border-radius: 5px;
+}
+li.nav-item:has(> .nav-link.active) {
+  background-color: cyan;
+  border-radius: 5px;
+}
+li.nav-item > a.nav-link {
+  color: #000 !important;
+}
+li.nav-item > a.nav-link.active {
+  color: red !important;
+}
+.avatar-user img {
+  width: 50px !important;
+  margin-right: 1rem;
+}
+/* CSS for Navar End */
+
+/* CSS for Question Component Start */
+.qs-cart-container {
+  max-width: 720px;
+  margin: auto;
+}
+.qs-card-avatar {
+  border-right: 2px solid rgb(2, 46, 122);
+  width: 25% !important;
+}
+.qs-card-avatar img {
+  width: 80% !important;
+}
+.card-body-content {
+  width: 75% !important;
+}
+.option-content {
+  width: 90%;
+}
+/* CSS for Question Component End */
+
+/* CSS for new-question Component Start */
+.new-question {
+  max-width: 720px;
+  margin: auto auto;
+}
+#backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+/* CSS for new-question Component End */
+
+.option-content .badge.bg-info {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+.your-answer {
+  color: green;
+}
+
+/* CSS for Leader-board Start */
+.leader-board-comp {
+  max-width: 720px;
+  margin: auto auto;
+}
+.leader-board-avatar img {
+  width: 120px;
+}
+.score-title {
+  background-color: #ffd1dc;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.rank-index {
+  position: absolute;
+  top: 5px;
+  right: -5px;
+}
+.rank-text {
+  font-size: 1.5rem !important;
+}
+.score-box {
+  background-color: #ffebef;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #146c43;
+}
+/* CSS for Leader-board End */
+
+/* CSS for Page not found Start */
+.error-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+/* CSS for Page not found End */
