@@ -57,24 +57,27 @@ const QuestionNew = () => {
             layout="vertical"
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 16 }}
-            style={{ maxWidth: 600, margin: "auto" }}
+            className={styles.form_question}
+            // style={{ maxWidth: 600, margin: "auto" }}
           >
             <Form.Item label="First option for question" name="optionOne">
               <Input
-                style={{ height: 40, width: 600 }}
+                className={styles.input_question}
+                // style={{ height: 40, width: 600 }}
                 placeholder="Option One"
               />
             </Form.Item>
 
             <Form.Item label="Two option for question" name="optionTwo">
               <Input
-                style={{ height: 40, width: 600 }}
+                className={styles.input_question}
+                // style={{ height: 40, width: 600 }}
                 placeholder="Option Two"
               />
             </Form.Item>
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Button
-                style={{ height: 40 }}
+                className={styles.button_question}
                 type="primary"
                 htmlType="submit"
                 onClick={handelAddQuestion}

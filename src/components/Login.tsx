@@ -52,7 +52,6 @@ const LoginPage = () => {
       form={form}
       layout="vertical"
     >
-      {/* <h1 style={{ textAlign: "center" }}>Login</h1> */}
       <h5 style={{ textAlign: "center", color: "darkblue" }}>
         Welcome to the Would You Rather App!
       </h5>

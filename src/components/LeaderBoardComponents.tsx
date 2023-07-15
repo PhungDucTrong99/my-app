@@ -47,8 +47,8 @@ const LeaderBoardBodyTab = () => {
   };
 
   return (
-    <Form style={{ margin: "auto auto" }} form={form} layout="vertical">
-      <Row style={{ justifyContent: "center" }}>
+    <Form className={styles.form_leader_1} form={form} layout="vertical">
+      <Row className={styles.title_leader}>
         <h2>Total Polls</h2>
       </Row>
 
@@ -56,32 +56,34 @@ const LeaderBoardBodyTab = () => {
         <Row
           key={item?.id}
           justify="center"
-          style={{
-            borderRadius: "5px",
-            border: " 1px solid gray",
-            marginBottom: 15,
-          }}
+          className={styles.form_leader}
+          // style={{
+          //   borderRadius: "5px",
+          //   border: " 1px solid gray",
+          //   marginBottom: 15,
+          // }}
         >
           <Col span={2} style={{ margin: "auto auto", padding: 20 }}>
             <Badge
               count={index + 1}
-              style={{ backgroundColor: "rgb(27 95 221)" }}
+              className={styles.badge_style}
+              style={{ backgroundColor: "#4be4c2" }}
             ></Badge>
           </Col>
-          <Col span={6} style={{ margin: "auto auto", padding: 20 }}>
+          <Col span={6} className={styles.col_leader}>
             <span>{userWithImage(item?.id)}</span>
           </Col>
-          <Col span={8} style={{ margin: "auto auto", padding: 20 }}>
+          <Col span={8} className={styles.col_leader}>
             <h2>{item.id}</h2>
             <Tag color="cyan">Question: {item?.question}</Tag>
             <Tag color="cyan">Answer: {item?.answer}</Tag>
           </Col>
-          <Col span={6} style={{ margin: "auto auto", padding: 20 }}>
+          <Col span={6} className={styles.col_leader}>
             <Card
               className={styles.custom_card}
               size="small"
               title="Total score"
-              style={{ width: 150, textAlign: "center" }}
+              // style={{ width: 150, textAlign: "center" }}
             >
               <Tag style={{ textAlign: "center" }} color="cyan">
                 {item?.totalScore * 10}

@@ -21,8 +21,46 @@
 }
 
 .custom_card {
+  width: 150px;
+  text-align: center;
+
   :global .ant-card-head {
     background-color: #87e8de;
   }
+}
+//question style
+.input_question {
+  height: 40px;
+  width: 600px;
+}
+.form_question {
+  max-width: 600px;
+  margin: auto;
+}
+.button_question {
+  height: 40px;
+}
+// style for leader
+.form_leader {
+  border-radius: 5px;
+  border: 1px solid #4be4c2;
+  margin-bottom: 15px;
+}
+.form_leader_1 {
+  margin: auto auto;
+}
+.title_leader {
+  justify-content: center;
+}
+// .badge_style {
+//   background-color: #5d53e8;
+// }
+.col_leader {
+  margin: auto auto;
+  padding: 20px;
+}
+.card_style {
+  width: 150px;
+  text-align: center;
 }
 /* You can add additional styling for the FooterPage component here if needed */
