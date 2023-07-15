@@ -20,11 +20,22 @@ const BodyTabAnswered = () => {
   const userQuestions = Object.values(listQuestions).filter((question: any) =>
     userQuestionsID.some((user: any) => user.question.includes(question.id))
   );
-
+  const userWithImage = (author: any) => {
+    // console.log("user", author);
+    const foundUser = Object.values(users).find((user: any) => {
+      return user.id === author;
+    });
+    console.log(foundUser);
+    return foundUser; // Return the entire foundUser object
+  };
   return (
     <div className="container">
       {userQuestions.map((question: any) => (
-        <AskLayout key={question.id} item={question} />
+        <AskLayout
+          key={question.id}
+          item={question}
+          userWithImage={userWithImage(question.author)}
+        />
       ))}
     </div>
   );

@@ -118,7 +118,7 @@ const initialState: State = {
     },
     loxhs1bqm25b708cmbf3g: {
       id: "loxhs1bqm25b708cmbf3g",
-      author: "000",
+      author: "111",
       createtime: "11:03 AM : 12/12/2011",
       optionOne: {
         votes: [""],

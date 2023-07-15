@@ -28,7 +28,12 @@ const AskLayout = (props: any) => {
           <div className="card-body">
             <div className="card-body qs-cart-body row">
               <div className="qs-card-avatar">
-                <img src={userWithImage?.image} alt="" />
+                {typeof userWithImage?.image === "string" ? (
+                  <img src={userWithImage?.image} alt="" />
+                ) : (
+                  userWithImage?.image
+                )}
+                {/* <img src={userWithImage?.image} alt="" /> */}
               </div>
               <div className="card-body-content d-flex flex-column align-items-start justify-content-center">
                 <h5 className="card-title">Would you rather</h5>
