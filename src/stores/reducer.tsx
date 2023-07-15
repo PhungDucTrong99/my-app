@@ -48,7 +48,7 @@ const initialState: State = {
       image: <Image1 />,
       password: "070699",
       role: "admin",
-      status: "inactive",
+      status: "inActive",
       totalPools: 4,
       answers: ["become a superhero"],
       question: ["6ni6ok3ym7mf1p33lnez"],
@@ -59,7 +59,7 @@ const initialState: State = {
       image: <Image2 />,
       password: "070699",
       role: "admin",
-      status: "inactive",
+      status: "inActive",
       totalPools: 1,
       answers: ["become a superhero"],
       question: ["6ni6ok3ym7mf1p33lnez"],
@@ -70,7 +70,7 @@ const initialState: State = {
       role: "admin",
       image: <Image3 />,
       password: "070699",
-      status: "inactive",
+      status: "inActive",
       totalPools: 1,
       answers: ["become a superhero"],
       question: ["6ni6ok3ym7mf1p33lnez"],
@@ -140,7 +140,7 @@ const reducer = (state = initialState, action: AnyAction): State => {
       );
 
       if (updatedUser) {
-        updatedUser.status = "active";
+        updatedUser.status = "Active";
       }
 
       return {
@@ -156,7 +156,7 @@ const reducer = (state = initialState, action: AnyAction): State => {
       );
 
       if (loginUser) {
-        loginUser.status = "active";
+        loginUser.status = "Active";
       }
 
       return {
@@ -170,7 +170,7 @@ const reducer = (state = initialState, action: AnyAction): State => {
       );
 
       if (updatedUserLogout) {
-        updatedUserLogout.status = "inactive";
+        updatedUserLogout.status = "inActive";
       }
 
       return {

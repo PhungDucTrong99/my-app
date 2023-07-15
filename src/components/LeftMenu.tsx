@@ -28,14 +28,14 @@ const LeftMenu: React.FC = () => {
 
   const UserCurrentLogin = () => {
     const usernames = Object.values(listUser)
-      .filter((user: any) => user.status === "active")
+      .filter((user: any) => user.status === "Active")
       .map((user: any) => user.username);
 
     return usernames;
   };
   const UserIdCurrentLogin = () => {
     const usernames = Object.values(listUser)
-      .filter((user: any) => user.status === "active")
+      .filter((user: any) => user.status === "Active")
       .map((user: any) => user.id);
 
     return usernames;

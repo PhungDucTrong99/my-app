@@ -19,7 +19,7 @@ function App() {
   const listUser = useSelector(todoListSelector);
 
   const userList = Object.values(listUser);
-  const hasActiveUser = userList.some((user: any) => user.status === "active");
+  const hasActiveUser = userList.some((user: any) => user.status === "Active");
 
   return (
     <Router>

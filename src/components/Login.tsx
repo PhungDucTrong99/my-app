@@ -30,7 +30,7 @@ const LoginPage = () => {
   useEffect(() => {
     const userList = Object.values(listUser);
     const hasActiveUser = userList.some(
-      (user: any) => user.status === "active"
+      (user: any) => user.status === "Active"
     );
     hasActiveUser ? navigate("/home") : navigate("/login");
   }, [listUser, navigate]);

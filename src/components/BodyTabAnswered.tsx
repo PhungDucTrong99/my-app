@@ -9,7 +9,7 @@ const BodyTabAnswered = () => {
 
   const UserCurrentLogin = () => {
     const usernames = Object.values(listUser)
-      .filter((user: any) => user.status === "active")
+      .filter((user: any) => user.status === "Active")
       .map((user: any) => user.id);
 
     return usernames;
@@ -20,6 +20,7 @@ const BodyTabAnswered = () => {
   const userQuestions = Object.values(listQuestions).filter((question: any) =>
     userQuestionsID.some((user: any) => user.question.includes(question.id))
   );
+
   return (
     <div className="container">
       {userQuestions.map((question: any) => (

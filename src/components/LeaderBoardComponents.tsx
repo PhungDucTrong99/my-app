@@ -42,6 +42,7 @@ const LeaderBoardBodyTab = () => {
     const foundUser: any = Object.values(listPoll)?.find((user: any) => {
       return user.username === id;
     });
+    console.log(foundUser?.image); // <-- Add this console.log statement
     return foundUser?.image;
   };
 
@@ -71,7 +72,7 @@ const LeaderBoardBodyTab = () => {
             <span>{userWithImage(item?.id)}</span>
           </Col>
           <Col span={8} style={{ margin: "auto auto", padding: 20 }}>
-            <h2>{item?.id}</h2>
+            <h2>{item.id}</h2>
             <Tag color="cyan">Question: {item?.question}</Tag>
             <Tag color="cyan">Answer: {item?.answer}</Tag>
           </Col>

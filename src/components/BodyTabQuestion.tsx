@@ -9,7 +9,7 @@ const BodyTabsQuestions = () => {
 
   const UserCurrentLogin = () => {
     const usernames = Object.values(listUser)
-      .filter((user: any) => user.status === "active")
+      .filter((user: any) => user.status === "Active")
       .map((user: any) => user.id);
 
     return usernames;

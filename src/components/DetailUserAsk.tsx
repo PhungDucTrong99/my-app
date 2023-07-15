@@ -25,7 +25,7 @@ const UserAskDetail = (props: any) => {
     option: string
   ) => {
     const userWithIdOne: any = Object.values(listUser).find(
-      (user: any) => user.status === "active"
+      (user: any) => user.status === "Active"
     );
     dispatch<any>(
       _saveQuestionAnswer({
@@ -79,7 +79,7 @@ const UserAskDetail = (props: any) => {
   useEffect(() => {
     const userList = Object.values(listUser);
     const hasActiveUser = userList.some(
-      (user: any) => user.status === "active"
+      (user: any) => user.status === "Active"
     );
     hasActiveUser
       ? navigate(`/question/${id}/${questionId}`)
@@ -88,7 +88,7 @@ const UserAskDetail = (props: any) => {
 
   useEffect(() => {
     const userWithId: any = Object.values(listUser).find(
-      (user: any) => user.status === "active"
+      (user: any) => user.status === "Active"
     );
     const questionID: any = Object.values(listQuestions).find(
       (question: any) => question.id === questionId

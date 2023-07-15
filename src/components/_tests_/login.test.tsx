@@ -4,7 +4,7 @@ import { isLogin } from "../../stores/action";
 import reducer from "../../stores/reducer";
 
 describe("isLogin action", () => {
-  it('should update user status to "active" for valid ID', () => {
+  it('should update user status to "Active" for valid ID', () => {
     const initialState: any = {
       isLoading: {
         status: false,
@@ -13,7 +13,7 @@ describe("isLogin action", () => {
         MasterYi: {
           id: "MasterYi",
           username: "Leo",
-          status: "inactive",
+          status: "inActive",
         },
       },
       listQuestion: {},
@@ -23,7 +23,7 @@ describe("isLogin action", () => {
 
     const state = reducer(initialState, action);
 
-    expect(state.user["MasterYi"].status).toBe("active");
+    expect(state.user["MasterYi"].status).toBe("Active");
     expect(state.user["MasterYi"].status).toMatchSnapshot();
   });
 
@@ -36,7 +36,7 @@ describe("isLogin action", () => {
         MasterYi: {
           id: "MasterYi",
           username: "Marock",
-          status: "inactive",
+          status: "inActive",
         },
       },
       listQuestion: {},
@@ -46,7 +46,7 @@ describe("isLogin action", () => {
 
     const state = reducer(initialState, action);
 
-    expect(state.user["MasterYi"].status).toBe("inactive");
+    expect(state.user["MasterYi"].status).toBe("inActive");
     expect(state.user["MasterYi"].status).toMatchSnapshot();
   });
 });
