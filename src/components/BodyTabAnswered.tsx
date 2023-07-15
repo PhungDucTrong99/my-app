@@ -21,7 +21,7 @@ const BodyTabAnswered = () => {
     userQuestionsID.some((user: any) => user.question.includes(question.id))
   );
   const userWithImage = (author: any) => {
-    // console.log("user", author);
+    console.log("user", author);
     const foundUser = Object.values(users).find((user: any) => {
       return user.id === author;
     });
