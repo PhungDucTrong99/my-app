@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 import React from "react";
-import { todoListSelector } from "./stores/selector";
+import { listSelector } from "./stores/selector";
 import NotFound from "./components/NotFoundPage";
 import LoginPage from "./components/Login";
 import HomePage from "./components/Home";
@@ -16,7 +16,7 @@ import UserAskDetail from "./components/DetailUserAsk";
 import LeaderboardPage from "./components/LeaderBoardPage";
 
 function App() {
-  const listUser = useSelector(todoListSelector);
+  const listUser = useSelector(listSelector);
 
   const userList = Object.values(listUser);
   const hasActiveUser = userList.some((user: any) => user.status === "Active");

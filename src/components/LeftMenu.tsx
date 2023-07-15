@@ -4,7 +4,7 @@ import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { isLogout } from "../stores/action";
-import { todoListSelector } from "../stores/selector";
+import { listSelector } from "../stores/selector";
 
 interface IItemMenu {
   key: string;
@@ -24,7 +24,7 @@ type ItemType = IItemMenu & {
 const LeftMenu: React.FC = () => {
   const dispatch = useDispatch();
   const [key, setKey] = useState("/");
-  const listUser = useSelector(todoListSelector);
+  const listUser = useSelector(listSelector);
 
   const UserCurrentLogin = () => {
     const usernames = Object.values(listUser)

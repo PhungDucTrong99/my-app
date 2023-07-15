@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { _saveQuestionAnswer } from "../stores/action";
-import { listQuestion, todoListSelector } from "../stores/selector";
+import { listQuestion, listSelector } from "../stores/selector";
 
 const UserAskDetail = (props: any) => {
-  const listUser = useSelector(todoListSelector);
+  const listUser = useSelector(listSelector);
   const listQuestions = useSelector(listQuestion);
   const { id, questionId } = useParams();
   const navigate = useNavigate();

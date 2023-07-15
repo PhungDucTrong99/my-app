@@ -2,7 +2,7 @@ import { Button, Form, Input } from "antd";
 import { _saveQuestion } from "../stores/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { todoListSelector } from "../stores/selector";
+import { listSelector } from "../stores/selector";
 import dayjs from "dayjs";
 import LeftMenu from "./LeftMenu";
 import FooterPage from "./Footer";
@@ -11,7 +11,7 @@ import styles from "./style/MainLayout.module.scss";
 const QuestionNew = () => {
   const [form] = Form.useForm();
   const dispatch = useDispatch();
-  const listUser = useSelector(todoListSelector);
+  const listUser = useSelector(listSelector);
   const navigate = useNavigate();
 
   const UserCurrentLogin = () => {

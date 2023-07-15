@@ -1,14 +1,14 @@
 import { Row, Col, Button, Input, Form } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { Login, isLogin } from "../stores/action";
-import { todoListSelector } from "../stores/selector";
+import { listSelector } from "../stores/selector";
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const LoginPage = () => {
   const [form] = Form.useForm();
   const dispatch = useDispatch();
-  const listUser = useSelector(todoListSelector);
+  const listUser = useSelector(listSelector);
   const navigate = useNavigate();
   const location = useLocation();
 

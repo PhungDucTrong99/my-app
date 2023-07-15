@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import { listPolls, listQuestion, todoListSelector } from "../stores/selector";
+import { listPolls, listQuestion, listSelector } from "../stores/selector";
 import AskLayout from "./UserAsk";
 
 const BodyTabAnswered = () => {
   const users = useSelector(listPolls);
   const listQuestions = useSelector(listQuestion);
-  const listUser = useSelector(todoListSelector);
+  const listUser = useSelector(listSelector);
 
   const UserCurrentLogin = () => {
     const usernames = Object.values(listUser)
