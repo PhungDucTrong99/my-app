@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`_saveQuestionAnswer should dispatch the correct action and update the state 1`] = `
+Array [
+  "000",
+]
+`;
+
+exports[`_saveQuestionAnswer should return an error if incorrect data is passed 1`] = `
+[Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32mfalse[39m
+Received: [31mtrue[39m]
+`;
+
+exports[`_saveQuestionAnswer should send the right action and update the status 1`] = `
+Array [
+  "000",
+]
+`;
+
+exports[`_saveQuestionAnswer will return an error if data transmission is incorrect 1`] = `
+[Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32mfalse[39m
+Received: [31mtrue[39m]
+`;

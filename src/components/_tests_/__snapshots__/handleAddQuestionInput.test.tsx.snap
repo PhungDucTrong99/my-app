@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`_saveQuestion2 should add a question to the state and resolve with the question ID 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "payload": Object {
+          "author": "Batman",
+          "createtime": "10:35 AM : 07/22/2023",
+          "id": "070699",
+          "optionOne": Object {
+            "text": "Option 1",
+            "votes": Array [],
+          },
+          "optionTwo": Object {
+            "text": "Option 2",
+            "votes": Array [],
+          },
+        },
+        "type": "user/addQuestion",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
