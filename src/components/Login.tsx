@@ -34,15 +34,29 @@ const LoginPage = () => {
     );
     hasActiveUser ? navigate("/home") : navigate("/login");
   }, [listUser, navigate]);
+
   const handleLogin = (user: any) => {
     dispatch(isLogin(user.id));
+    const getPathItem = localStorage.getItem("redirectUrl");
+    console.log("getPathItem", getPathItem);
+    if (getPathItem) {
+      console.log("oke", getPathItem);
+      navigate(getPathItem);
+    } else {
+      console.log("home");
+      navigate("/home");
+    }
   };
 
   useEffect(() => {
     localStorage.setItem("currentURL", location.pathname);
-    const savedURL = localStorage.getItem("currentURL");
-    if (savedURL && savedURL?.includes("question/")) {
-      localStorage.setItem("currentURL2", location.pathname);
+    const savedURL: any = localStorage.getItem("currentURL");
+    // console.log("save url", savedURL);
+    if (savedURL && savedURL !== savedURL?.includes("/login")) {
+      if (savedURL && savedURL?.includes("question/")) {
+        localStorage.setItem("redirectUrl", location.pathname);
+        console.log("savedURL", savedURL);
+      }
     }
   }, [location]);
 

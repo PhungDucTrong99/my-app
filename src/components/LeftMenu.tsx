@@ -80,6 +80,7 @@ const LeftMenu: React.FC = () => {
               href="/"
               onClick={() => {
                 dispatch(isLogout(UserIdCurrentLogin().toString()));
+                localStorage.removeItem("redirectUrl");
               }}
             >
               Logout

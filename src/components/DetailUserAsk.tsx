@@ -94,7 +94,13 @@ const UserAskDetail = (props: any) => {
       (question: any) => question.id === questionId
     );
 
-    if (userWithId?.question.includes(questionID.id)) {
+    console.log("questionID", questionID);
+    if (questionID === undefined) {
+      navigate("/404");
+      localStorage.removeItem("redirectUrl");
+    }
+
+    if (userWithId?.question.includes(questionID?.id)) {
       const optionOneText = questionID.optionOne.text;
       const optionTwoText = questionID.optionTwo.text;
 
@@ -103,6 +109,7 @@ const UserAskDetail = (props: any) => {
       } else if (userWithId.answers.includes(optionTwoText)) {
         setSelected("optionTwo");
       }
+    } else {
     }
 
     Object.values(listQuestions).forEach((question: any) => {
