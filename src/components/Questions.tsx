@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import LeftMenu from "./LeftMenu";
 import FooterPage from "./Footer";
 import styles from "./style/MainLayout.module.scss";
+import { useEffect } from "react";
 
 const QuestionNew = () => {
   const [form] = Form.useForm();
@@ -43,6 +44,13 @@ const QuestionNew = () => {
         console.log("error", error);
       });
   };
+  useEffect(() => {
+    const userList = Object.values(listUser);
+    const hasActiveUser = userList.some(
+      (user: any) => user.status === "Active"
+    );
+    hasActiveUser ? navigate("/add") : navigate("/login");
+  }, [listUser, navigate]);
 
   return (
     <>
